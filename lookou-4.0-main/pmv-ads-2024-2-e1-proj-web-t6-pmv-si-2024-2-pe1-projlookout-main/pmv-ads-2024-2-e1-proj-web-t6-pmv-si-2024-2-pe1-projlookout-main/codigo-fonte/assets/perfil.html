@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="./css/perfil/perfil.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="./js/perfil.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo">Lookout</div>
+        <nav id="menu">
+            <ul>
+                <a class="nav-item" href="homepage.html">Home</a>
+                <a class="nav-item" href="perfil.html">Perfil</a>
+                <a class="nav-item" href="login.html">Login</a>
+                <a class="nav-item" href="sobre.html">Sobre</a>
+            </ul>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776; 
+        </div>
+    </header>
+    <div class="container">
+
+        
+        <main class="profile-container">
+            <h1 class="welcome">Olá, nome_de_usuário</h1>
+            <p class="subtitle">Abaixo informações gerais sobre seu perfil:</p>
+            
+            <div class="editor-container">
+                <div class="content-area">
+                    <div class="info-field">
+                        <label>NOME COMPLETO:</label>
+                        <p class="info-content"></p>
+                    </div>
+                    
+                    <div class="info-field">
+                        <label>EMAIL:</label>
+                        <p class="info-content"></p>
+                    </div>
+                    
+                    <div class="info-field">
+                        <label>CPF:</label>
+                        <p class="info-content"></p>
+                    </div>
+                    
+                    <div class="info-field">
+                        <label>USUÁRIO DESDE:</label>
+                        <p class="info-content"></p>
+                    </div>
+                    
+                    <div class="info-field">
+                        <label>INCIDENTES REPORTADOS:</label>
+                        <p class="info-content"></p>
+                    </div>
+                </div>
+                
+
+            </div>
+            
+            <div class="button-container">
+                <button class="action-button logout">Logout</button>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por estudantes da PUC Minas. 2024.</p>
+    </footer>
+</body>
+
+<script>
+    
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+    }
+</script>
+</html>
