@@ -245,6 +245,12 @@ footer{
     }
 }
 
+.follow-mouse-marker {
+    position: absolute;
+    pointer-events: none; /* Garante que o marcador não interfira no clique */
+    z-index: 1000; /* Fica acima de outros elementos */
+}
+
 
 
 

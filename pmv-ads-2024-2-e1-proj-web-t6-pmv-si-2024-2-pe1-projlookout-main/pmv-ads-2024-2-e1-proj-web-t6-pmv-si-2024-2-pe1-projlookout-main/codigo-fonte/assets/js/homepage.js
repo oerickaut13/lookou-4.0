@@ -147,3 +147,52 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 });
+
+
+let activeIcon = null; // Ícone atualmente selecionado
+let followMouseMarker = null; // Elemento que segue o mouse
+
+// Função para criar e configurar o marcador que segue o mouse
+function enableIconDrag(iconClass) {
+    activeIcon = iconClass;
+
+    // Cria um elemento que seguirá o mouse
+    if (!followMouseMarker) {
+        followMouseMarker = document.createElement('div');
+        followMouseMarker.className = 'follow-mouse-marker';
+        followMouseMarker.innerHTML = `<i class="${iconClass}" style="font-size: 24px; color: #CC164E;"></i>`;
+        document.body.appendChild(followMouseMarker);
+
+        // Atualiza a posição do marcador para seguir o mouse
+        document.addEventListener('mousemove', (e) => {
+            followMouseMarker.style.left = `${e.pageX}px`;
+            followMouseMarker.style.top = `${e.pageY}px`;
+        });
+    }
+}
+
+// Adiciona o marcador no mapa ao clicar
+map.on('click', function (e) {
+    if (activeIcon) {
+        const { lat, lng } = e.latlng;
+
+        // Adiciona um marcador ao mapa nas coordenadas do clique
+        L.marker([lat, lng], { icon: criarMarcador(activeIcon) }).addTo(map);
+
+        // Remove o marcador de acompanhamento do mouse
+        if (followMouseMarker) {
+            document.body.removeChild(followMouseMarker);
+            followMouseMarker = null;
+        }
+
+        activeIcon = null; // Reseta o ícone ativo
+    }
+});
+
+// Adiciona evento aos botões para ativar o modo de acompanhamento
+document.querySelectorAll('.icon-button').forEach((button) => {
+    button.addEventListener('click', function () {
+        const iconClass = button.querySelector('i').className;
+        enableIconDrag(iconClass);
+    });
+});
