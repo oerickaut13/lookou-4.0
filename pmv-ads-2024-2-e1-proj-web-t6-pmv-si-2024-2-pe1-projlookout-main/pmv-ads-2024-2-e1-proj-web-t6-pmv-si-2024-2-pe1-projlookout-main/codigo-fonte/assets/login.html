@@ -13,16 +13,16 @@
 
 <body>
     <header>
-        <div id="logo">Lookout</div>
-        <nav id="menu">
+        <div id="logo" href="homepage.html">Lookout</div>
+           <nav id="menu">
             <ul>
                 <a class="nav-item" href="homepage.html">Home</a>
                 <a class="nav-item" href="login.html">Login</a>
                 <a class="nav-item" href="sobre.html">Sobre</a>
             </ul>
-        </nav>
+            </nav>
         <div class="hamburger" onclick="toggleMenu()">
-            &#9776; 
+                &#9776; 
         </div>
     </header>
 
@@ -61,4 +61,12 @@
     </footer>
 
 </body>
+
+<script>
+    
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+    }
+</script>
 </html>

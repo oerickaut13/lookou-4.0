@@ -56,6 +56,7 @@ body header #logo {
   font-size: 30px;
   cursor: pointer;
 }
+
 #cadastro_container {
   background-color: white; /* Cor de fundo do contêiner */
   border-radius: 10px; /* Cantos arredondados, opcional */
@@ -64,9 +65,11 @@ body header #logo {
   flex-direction: column; /* Alinha os itens na coluna */
   height: 418px; /* Define a altura desejada do contêiner */
   justify-content: left; /* Alinha o conteúdo ao topo */
-  margin: 100px auto; /* Centraliza horizontalmente e adiciona margem acima e abaixo */
+  margin: 40px auto; /* Centraliza horizontalmente e adiciona margem acima e abaixo */
   position: relative; /* Para que o contêiner não afete o layout */
   width: 500px; /* Define a largura desejada do contêiner */
+  height: auto;
+  min-height: 418px;
 }
 
 #cadastro_container h1 {
@@ -135,6 +138,31 @@ footer {
   width: 100%; /* Define a largura do footer como 100% */
 }
 
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  #logo {
+    font-size: 20px;
+  }
+
+  .container {
+    margin: 20px auto;
+    width: 95%;
+  }
+
+  .container h1 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+
+  footer {
+    font-size: 11px;
+  }
+}
+
 @media (max-width: 768px) {
  
   #menu ul {
@@ -163,19 +191,21 @@ footer {
   }
 }
 
-footer {
-  align-items: center; /* Alinha verticalmente os itens do footer */
-  background-color: #2E2E2E; /* Cor de fundo do footer */
-  bottom: 0; /* Posiciona o footer na parte inferior */
-  box-shadow: 0 -2px 2px #969696; /* Sombra na parte superior do footer */
-  color: white; /* Cor do texto do footer */
-  display: flex; /* Para alinhar o conteúdo do footer */
-  font-size: 12px; /* Tamanho da fonte do footer */
-  height: 30px; /* Define a altura do footer */
-  justify-content: center; /* Centraliza horizontalmente o conteúdo do footer */
-  position: fixed; /* Fixa o footer na parte inferior da tela */
-  text-align: center; /* Centraliza o texto no footer */
-  width: 100%; /* Define a largura do footer como 100% */
+footer{
+    background-color: #2E2E2E;
+    color: white;
+    font-size: 12px;
+    box-shadow: 0 -1px 1px #969696;
+    width: 100%;
+    height: 30px;
+    
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -183,6 +213,15 @@ footer {
 
 
 
+@media (max-width: 620px) {
+    .icon-button span{
+        display: none;
+    }
+
+    #address_input{
+        width: 300px; 
+    }
+}
 
 
 

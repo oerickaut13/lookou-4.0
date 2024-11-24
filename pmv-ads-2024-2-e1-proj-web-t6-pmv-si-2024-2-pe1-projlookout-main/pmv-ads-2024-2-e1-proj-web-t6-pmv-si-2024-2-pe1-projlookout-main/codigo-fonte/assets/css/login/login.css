@@ -58,90 +58,94 @@ body header #logo {
   cursor: pointer;
 }
 
+
 .login-container {
-  background-color: white; /* Cor de fundo do contêiner */
-  border-radius: 10px; /* Cantos arredondados, opcional */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor do contêiner */
-  display: flex; /* Para usar flexbox */
-  flex-direction: column; /* Alinha os itens na coluna */
-  height: 418px; /* Define a altura desejada do contêiner */
-  justify-content: center; /* Alinha o conteúdo ao topo */
-  margin: 100px auto; /* Centraliza horizontalmente e adiciona margem acima e abaixo */
-  position: relative; /* Para que o contêiner não afete o layout */
-  width: 500px; /* Define a largura desejada do contêiner */
-  
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 418px;
+  justify-content: left;
+  margin: 40px auto;
+  padding: 20px;
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin-top: 50px;
 }
 
 .login-container h1 {
-  color: #333; /* Cor do título de login */
-  font-size: 24px; /* Define o tamanho da fonte */
-  margin-bottom: 15px; /* Adiciona espaçamento abaixo */
-  margin-top: 40px; /* Adiciona espaçamento acima */
-  text-align: center; /* Centraliza o título */
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .subtitle {
-  color: #666; /* Cor do subtítulo */
-  font-size: 14px; /* Tamanho da fonte */
-  margin-bottom: 30px; /* Espaçamento inferior */
-  text-align: center; /* Centraliza o subtítulo */
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 0 15px;
 }
 
 .login-form {
-  display: flex; /* Flexbox para organizar os campos */
-  flex-direction: column; /* Alinha os campos verticalmente */
-  gap: 20px; /* Espaçamento entre os campos */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
 }
 
 .form-group {
-  margin-left: 25px; /* Distância da borda esquerda */
-  width: 85%; /* Largura relativa do contêiner dos campos */
+  margin-left: 0;
+  width: 100%;
+  padding: 0 15px;
 }
 
 .form-group input {
-  border: 1px solid #ddd; /* Define a borda */
-  border-radius: 4px; /* Cantos arredondados */
-  font-size: 14px; /* Tamanho da fonte */
-  padding: 12px; /* Preenchimento interno do campo */
-  width: 100%; /* Ocupa toda a largura do contêiner pai */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 12px;
+  width: 100%;
 }
 
 .login-button {
-  background-color: #CC164E; /* Cor de fundo do botão */
-  border: none; /* Remove bordas */
-  border-radius: 4px; /* Cantos arredondados */
-  color: white; /* Cor do texto */
-  cursor: pointer; /* Define o cursor como mãozinha */
-  font-size: 16px; /* Tamanho da fonte */
-  margin-left: 25px; /* Distância da borda esquerda */
-  padding: 12px; /* Preenchimento interno */
-  transition: background-color 0.3s; /* Animação para o hover */
-  width: 90%; /* Largura do botão */
+  background-color: #CC164E;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 15px auto;
+  padding: 12px;
+  transition: background-color 0.3s;
+  width: calc(100% - 30px);
 }
 
 .login-button:hover {
-  background-color: #a8103e; /* Cor do botão ao passar o mouse */
+  background-color: #a8103e;
 }
 
-.cadastro-link {
-  background-color: #CC164E; /* Cor de fundo do botão */
-  border: none; /* Remove bordas */
-  border-radius: 4px; /* Cantos arredondados */
-  color: white; /* Cor do texto */
-  cursor: pointer; /* Define o cursor como mãozinha */
-  font-size: 16px; /* Tamanho da fonte */
-  margin-left: 35%; /* Distância da borda esquerda */
-  padding: 7px; /* Preenchimento interno */
-  transition: background-color 0.3s; /* Animação para o hover */
-  width: 30%; /* Largura do botão */
-  text-align: center;
+footer {
   align-items: center;
+  background-color: #2E2E2E;
+  bottom: 0;
+  box-shadow: 0 -2px 2px #969696;
+  color: white;
+  display: flex;
+  font-size: 12px;
+  height: 30px;
+  justify-content: center;
+  position: fixed;
+  text-align: center;
+  width: 100%;
 }
 
-
-
-
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
  
   #menu ul {
       display: none;
@@ -169,18 +173,34 @@ body header #logo {
   }
 }
 
-footer {
-  align-items: center; /* Alinha verticalmente os itens do footer */
-  background-color: #2E2E2E; /* Cor de fundo do footer */
-  bottom: 0; /* Posiciona o footer na parte inferior */
-  box-shadow: 0 -2px 2px #969696; /* Sombra na parte superior do footer */
-  color: white; /* Cor do texto do footer */
-  display: flex; /* Para alinhar o conteúdo do footer */
-  font-size: 12px; /* Tamanho da fonte do footer */
-  height: 30px; /* Define a altura do footer */
-  justify-content: center; /* Centraliza horizontalmente o conteúdo do footer */
-  position: fixed; /* Fixa o footer na parte inferior da tela */
-  text-align: center; /* Centraliza o texto no footer */
-  width: 100%; /* Define a largura do footer como 100% */
+footer{
+    background-color: #2E2E2E;
+    color: white;
+    font-size: 12px;
+    box-shadow: 0 -1px 1px #969696;
+    width: 100%;
+    height: 30px;
+    
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
+
+
+
+
+@media (max-width: 620px) {
+    .icon-button span{
+        display: none;
+    }
+
+    #address_input{
+        width: 300px; 
+    }
+}
